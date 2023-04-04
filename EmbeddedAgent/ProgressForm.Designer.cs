@@ -1,4 +1,6 @@
-﻿namespace EmbeddedAgent
+﻿using System.ComponentModel;
+
+namespace EmbeddedAgent
 {
     partial class progressForm
     {
