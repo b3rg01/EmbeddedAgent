@@ -1,0 +1,17 @@
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\bin\Debug\net6.0-windows\EmbeddedAgent.exe
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\bin\Debug\net6.0-windows\EmbeddedAgent.deps.json
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\bin\Debug\net6.0-windows\EmbeddedAgent.runtimeconfig.json
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\bin\Debug\net6.0-windows\EmbeddedAgent.dll
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\bin\Debug\net6.0-windows\EmbeddedAgent.pdb
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.csproj.AssemblyReference.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.csproj.GenerateResource.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.AssemblyInfoInputs.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.AssemblyInfo.cs
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.csproj.CoreCompileInputs.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.dll
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\refint\EmbeddedAgent.dll
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.pdb
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.genruntimeconfig.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\ref\EmbeddedAgent.dll
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\EmbeddedAgent.progressForm.resources
