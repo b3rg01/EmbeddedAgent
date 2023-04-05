@@ -33,6 +33,7 @@ namespace EmbeddedAgent
             this.btnStart = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblStatus = new System.Windows.Forms.Label();
+            this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btnStart
@@ -61,6 +62,12 @@ namespace EmbeddedAgent
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Progress...0%";
             // 
+            // backgroundWorker
+            // 
+            this.backgroundWorker.WorkerReportsProgress = true;
+            this.backgroundWorker.WorkerSupportsCancellation = true;
+            this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            // 
             // progressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -82,5 +89,6 @@ namespace EmbeddedAgent
         private Button btnStart;
         private ProgressBar progressBar;
         private Label lblStatus;
+        private BackgroundWorker backgroundWorker;
     }
 }

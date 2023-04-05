@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Pd77a+9oGvgh/+im+dIyL6MQeL5IS0rseflkxsm/7mpHhh9m4WSGJ7SAcocZf+P58gzLjSD0Oniq5U1O5kvppg==",
+  "dgSpecHash": "iVAnGu0UtEiPAPUO1C8pn7V2P3D+zpEVRCasFyj2mlFrm6xU86WStrafWW3/ddv8dLzH9H1wNaRIROCF+qfgoA==",
   "success": true,
   "projectFilePath": "C:\\Users\\a123y\\Documents\\cyberSec\\malware\\EmbeddedAgent\\EmbeddedAgent\\EmbeddedAgent\\EmbeddedAgent.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\a123y\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.11\\microsoft.aspnetcore.app.runtime.win-x64.6.0.11.nupkg.sha512",
+    "C:\\Users\\a123y\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.11\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.11.nupkg.sha512",
+    "C:\\Users\\a123y\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.11\\microsoft.netcore.app.runtime.win-x64.6.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

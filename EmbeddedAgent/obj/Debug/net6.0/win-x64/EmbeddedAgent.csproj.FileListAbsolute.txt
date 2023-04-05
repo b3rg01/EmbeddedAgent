@@ -1,0 +1,7 @@
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.csproj.AssemblyReference.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.progressForm.resources
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.csproj.GenerateResource.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.AssemblyInfoInputs.cache
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.AssemblyInfo.cs
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0\win-x64\EmbeddedAgent.csproj.CoreCompileInputs.cache
