@@ -1,2 +1,3 @@
-EmbeddedAgent/bin
-EmbeddedAgent/obj
+EmbeddedAgent/bin/**
+EmbeddedAgent/obj/**
+
