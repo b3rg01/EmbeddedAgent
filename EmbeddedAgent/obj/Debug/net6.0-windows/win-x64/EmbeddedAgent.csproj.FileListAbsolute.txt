@@ -504,6 +504,7 @@ C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAg
 C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\bin\Debug\net6.0-windows\win-x64\zh-Hant\WindowsFormsIntegration.resources.dll
 C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\win-x64\EmbeddedAgent.csproj.AssemblyReference.cache
 C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\win-x64\EmbeddedAgent.progressForm.resources
+C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\win-x64\EmbeddedAgent.Properties.Resources.resources
 C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\win-x64\EmbeddedAgent.csproj.GenerateResource.cache
 C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\win-x64\EmbeddedAgent.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\a123y\Documents\cyberSec\malware\EmbeddedAgent\EmbeddedAgent\EmbeddedAgent\obj\Debug\net6.0-windows\win-x64\EmbeddedAgent.AssemblyInfoInputs.cache

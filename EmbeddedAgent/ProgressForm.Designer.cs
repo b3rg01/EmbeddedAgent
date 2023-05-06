@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using EmbeddedAgent.Properties;
+using System.ComponentModel;
 
 namespace EmbeddedAgent
 {
@@ -79,6 +80,7 @@ namespace EmbeddedAgent
             this.Name = "progressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Installer.exe";
+            this.Icon = Resources.Tatice_Operating_Systems_Windows;
             this.ResumeLayout(false);
             this.PerformLayout();
 
