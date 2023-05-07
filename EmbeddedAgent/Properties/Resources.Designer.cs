@@ -63,6 +63,16 @@ namespace EmbeddedAgent.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon Mcdo_Design_Cats_Installer {
+            get {
+                object obj = ResourceManager.GetObject("Mcdo-Design-Cats-Installer", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon Tatice_Operating_Systems_Windows {
             get {
                 object obj = ResourceManager.GetObject("Tatice-Operating-Systems-Windows", resourceCulture);

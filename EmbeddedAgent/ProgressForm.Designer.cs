@@ -80,7 +80,7 @@ namespace EmbeddedAgent
             this.Name = "progressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Installer.exe";
-            this.Icon = Resources.Tatice_Operating_Systems_Windows;
+            this.Icon = Resources.Mcdo_Design_Cats_Installer;
             this.ResumeLayout(false);
             this.PerformLayout();
 

