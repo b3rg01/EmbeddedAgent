@@ -39,9 +39,10 @@ namespace EmbeddedAgent
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(459, 136);
+            this.btnStart.Location = new System.Drawing.Point(852, 290);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.Size = new System.Drawing.Size(139, 49);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -49,17 +50,19 @@ namespace EmbeddedAgent
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(71, 87);
+            this.progressBar.Location = new System.Drawing.Point(132, 186);
+            this.progressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(463, 31);
+            this.progressBar.Size = new System.Drawing.Size(860, 66);
             this.progressBar.TabIndex = 1;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(272, 46);
+            this.lblStatus.Location = new System.Drawing.Point(505, 98);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(77, 15);
+            this.lblStatus.Size = new System.Drawing.Size(152, 32);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Progress...0%";
             // 
@@ -68,19 +71,21 @@ namespace EmbeddedAgent
             this.backgroundWorker.WorkerReportsProgress = true;
             this.backgroundWorker.WorkerSupportsCancellation = true;
             this.backgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_DoWork);
+            this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
             // progressForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 207);
+            this.ClientSize = new System.Drawing.Size(1157, 442);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.btnStart);
+            this.Icon = global::EmbeddedAgent.Properties.Resources.Mcdo_Design_Cats_Installer;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "progressForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Installer.exe";
-            this.Icon = Resources.Mcdo_Design_Cats_Installer;
             this.ResumeLayout(false);
             this.PerformLayout();
 
