@@ -1,5 +1,4 @@
-﻿using EmbeddedAgent.Properties;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace EmbeddedAgent
 {

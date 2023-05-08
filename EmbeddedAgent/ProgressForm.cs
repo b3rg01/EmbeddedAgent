@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
 
 namespace EmbeddedAgent
 {
@@ -73,20 +65,13 @@ namespace EmbeddedAgent
                 backgroundWorker.CancelAsync();
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally { backgroundWorker.Dispose(); }
         }
 
+        //TODO
+        //I have to find a way to reactivate winDefender after running my script without blocking it
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            try
-            {
-                Thread.Sleep(10000);
-                AgentProcess.ExecuteCommands(AgentProcess.CleanUpCommands());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            backgroundWorker.Dispose();
         }
     }
 

