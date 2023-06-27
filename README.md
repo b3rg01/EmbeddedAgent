@@ -65,6 +65,7 @@
     - uri of the Invoke-WebRequest
     - The name of the outfile
     - the executable program
+    - powershell commands (I recommend to obfuscate your powershell agent command that you will inject)
 - Run command : `dotnet build -o <path> -p:AssemblyName=<name>`
 ` (in my case the platform is win-x64)
 - Rename folder and executable name to the preferred name and zip it (in my case the name of my project is extremely suspicious)
