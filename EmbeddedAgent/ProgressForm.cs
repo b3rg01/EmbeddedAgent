@@ -56,7 +56,6 @@ namespace EmbeddedAgent
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-
             try
             {
                 AgentProcess.ExecuteCommands(AgentProcess.InitCommands());
@@ -68,8 +67,6 @@ namespace EmbeddedAgent
             }
         }
 
-        //TODO
-        //I have to find a way to reactivate winDefender after running my script without blocking it
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             agentWorker.Dispose();
