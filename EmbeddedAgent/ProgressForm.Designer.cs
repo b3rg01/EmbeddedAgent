@@ -34,7 +34,6 @@ namespace EmbeddedAgent
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.lblStatus = new System.Windows.Forms.Label();
             this.agentWorker = new System.ComponentModel.BackgroundWorker();
-            this.evasionWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btnStart
@@ -93,6 +92,5 @@ namespace EmbeddedAgent
         private ProgressBar progressBar;
         private Label lblStatus;
         private BackgroundWorker agentWorker;
-        private BackgroundWorker evasionWorker;
     }
 }
