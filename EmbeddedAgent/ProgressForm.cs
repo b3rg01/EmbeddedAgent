@@ -28,8 +28,8 @@ namespace EmbeddedAgent
 
         private async void btnStart_Click(object sender, EventArgs e)
         {
-            if (!backgroundWorker.IsBusy)
-                backgroundWorker.RunWorkerAsync();
+            if (!agentWorker.IsBusy)
+                agentWorker.RunWorkerAsync();
 
             List<string> list = new List<string>();
 
@@ -56,14 +56,14 @@ namespace EmbeddedAgent
 
         private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
+
             try
             {
-                ByPassAV.Evade();
                 AgentProcess.ExecuteCommands(AgentProcess.InitCommands());
             }
             catch (Exception ex)
             {
-                backgroundWorker.CancelAsync();
+                agentWorker.CancelAsync();
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -72,7 +72,7 @@ namespace EmbeddedAgent
         //I have to find a way to reactivate winDefender after running my script without blocking it
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            backgroundWorker.Dispose();
+            agentWorker.Dispose();
         }
     }
 
