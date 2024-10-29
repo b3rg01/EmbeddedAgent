@@ -68,7 +68,7 @@
     - Windows (Victim)
     - Kali Linux (Attacker)
 
-Configure C2
+### Configure C2
 
 #### 1. Start PowerShell-Empire
 
@@ -107,10 +107,8 @@ execute
 
 ## Coding Application
 
-<aside>
-💡 Make Progress Bar that will make it seem, like it is installing something but in the background it will inject the stager + AMSI Bypass (The patch is only applied for one PowerShell session after that it goes back to default)
+💡Make Progress Bar that will make it seem, like it is installing something but in the background it will inject the stager + AMSI Bypass (The patch is only applied for one PowerShell session after that it goes back to default)
 
-</aside>
 
 - I added an app-manifest that requires the application to be executed as administrator, so I would already have elevated privilege
 - I also added some PowerShell command to deactivate some functionalities of windows defender, to be able to execute the script (They will be obfuscated)
@@ -118,10 +116,7 @@ execute
 
 ### Obfuscation
 
-<aside>
 📌 Follow the instruction in this repository: [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) , to install Invoke-Obfuscation on you attacking machine (Do it in a new terminal)
-
-</aside>
 
 You can encode any PowerShell command that you add in the Agent Process class
 
@@ -131,9 +126,10 @@ You can encode any PowerShell command that you add in the Agent Process class
 dotnet build
 ```
 
-- Testing
-    - Zip the program
-    - Put it on the victim machine
-    - unzip it
-    - execute program
-        - Will have to keep my listener running on my PowerShell machine
+## Testing
+
+- Zip the program
+- Put it on the victim machine
+- unzip it
+- execute program
+   - Will have to keep my listener running on my PowerShell machine
