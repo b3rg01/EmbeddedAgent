@@ -50,16 +50,19 @@
                /_/                         /____/                  
 ```
 
+> ⚠️ **Warning:** As of today, this may not be able to bypass AMSI anymore
+
+
 ## Techno & Tools
 
 - C#
 - Python
 - PowerShell-Empire
-- https://github.com/danielbohannon/Invoke-Obfuscation
+- [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation)
 
 ## Process
 
-## Setup Environment
+### Setup Environment
 
 - You will need 2 VMs
     - Windows (Victim)
@@ -67,7 +70,7 @@
 
 Configure C2
 
-### 1. Start PowerShell-Empire
+#### 1. Start PowerShell-Empire
 
 <aside>
 📌 Open 2  terminal and in each one enter these command (one in each)
@@ -79,7 +82,7 @@ sudo powershell-empire server
 sudo powershell-empire client
 ```
 
-### 2. Configure Listener
+#### 2. Configure Listener
 
 ```bash
 uselistner http
@@ -89,7 +92,7 @@ set Port <Port>
 execute
 ```
 
-### 3. Configure Stager
+#### 3. Configure Stager
 
 <aside>
 📌 This will generate .bat file
@@ -113,10 +116,10 @@ execute
 - I also added some PowerShell command to deactivate some functionalities of windows defender, to be able to execute the script (They will be obfuscated)
 - Now Your question might be why you need an AMSI bypass if you will disable windows defender. The thing is when you some PowerShell command AMSI will block it’s execution because it might be a malicious command even if it is obfuscated
 
-## Obfuscation
+### Obfuscation
 
 <aside>
-📌 Follow the instruction in this repository: https://github.com/danielbohannon/Invoke-Obfuscation, to install Invoke-Obfuscation on you attacking machine (Do it in a new terminal)
+📌 Follow the instruction in this repository: [Invoke-Obfuscation](https://github.com/danielbohannon/Invoke-Obfuscation) , to install Invoke-Obfuscation on you attacking machine (Do it in a new terminal)
 
 </aside>
 
