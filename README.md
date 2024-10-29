@@ -52,16 +52,12 @@
 
 ## Techno & Tools
 
----
-
 - C#
 - Python
 - PowerShell-Empire
 - https://github.com/danielbohannon/Invoke-Obfuscation
 
 ## Process
-
----
 
 ## Setup Environment
 
